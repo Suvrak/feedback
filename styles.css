@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #2e2e2e; /* Темный фон */
     color: #ffffff; /* Белый текст */
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
