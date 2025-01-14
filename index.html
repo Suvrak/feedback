@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дерево Папок</title>
+    <title>Диспетчер Устройств</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Дерево Папок</h1>
+<h1>Диспетчер Устройств</h1>
 <div class="tree">
-    <ul id="file-list">
-        <li class="folder">Папка 1
+    <ul id="device-list">
+        <li class="folder">Аудиоустройства
+            <span class="toggle">+</span>
             <ul>
-                <li class="folder">Подпапка 1.1
-                    <ul>
-                        <li class="file">Файл 1.1.1.txt</li>
-                        <li class="file">Файл 1.1.2.txt</li>
-                    </ul>
-                </li>
-                <li class="file">Файл 1.2.txt</li>
+                <li class="device">Динамики</li>
+                <li class="device">Наушники</li>
             </ul>
         </li>
-        <li class="folder">Папка 2
+        <li class="folder">Видеоустройства
+            <span class="toggle">+</span>
             <ul>
-                <li class="file">Файл 2.1.txt</li>
-                <li class="file">Файл 2.2.txt</li>
+                <li class="device">Монитор</li>
+                <li class="device">Веб-камера</li>
             </ul>
         </li>
-        <li class="file">Файл 3.txt</li>
+        <li class="folder">Сетевые адаптеры
+            <span class="toggle">+</span>
+            <ul>
+                <li class="device">Wi-Fi адаптер</li>
+                <li class="device">Ethernet адаптер</li>
+            </ul>
+        </li>
     </ul>
 </div>
+
 <div id="details" class="details">
-    <h2>Информация о выбранном элементе</h2>
-    <p id="info">Выберите файл или папку для отображения информации.</p>
+    <h2>Информация о выбранном устройстве</h2>
+    <p id="info">Выберите устройство для отображения информации.</p>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
