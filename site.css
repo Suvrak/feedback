@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff; /* Белый текст заголовка */
+}
+
+.tree {
+    margin: 20px auto;
+    width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.folder {
+    cursor: pointer;
+    font-weight: bold;
+    color: #00aaff; /* Цвет папок */
+}
+
+.file {
+    cursor: default;
+    color: #ffffff; /* Цвет файлов */
+}
+
+.folder ul {
+    display: none; /* Скрываем вложенные списки по умолчанию */
+}
+
+.folder.open > ul {
+    display: block; /* Показываем вложенные списки при открытии */
+}
+
+/* Добавим немного стилей для отделения элементов */
+li {
+    margin: 5px 0;
+}
