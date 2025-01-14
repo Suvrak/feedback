@@ -1,0 +1,47 @@
+@page
+@model YourNamespace.Pages.IndexModel
+@{
+    ViewData["Title"] = "Директория";
+}
+
+<h1>Моя Директория</h1>
+<div class="tree">
+    <ul id="file-list">
+        @foreach (var item in Model.FileItems)
+        {
+            RenderFileItem(item);
+        }
+    </ul>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.folder').forEach(folder => {
+            folder.addEventListener('click', function (e) {
+                e.stopPropagation(); // предотвращаем всплытие события
+                this.classList.toggle('open');
+            });
+        });
+    </script>
+}
+
+@functions {
+    private void RenderFileItem(FileItem item)
+    {
+        if (item.IsFolder)
+        {
+            <li class="folder">@item.Name
+                <ul>
+                    @foreach (var child in item.Children)
+                    {
+                        RenderFileItem(child);
+                    }
+                </ul>
+            </li>
+        }
+        else
+        {
+            <li class="file">@item.Name</li>
+        }
+    }
+}
