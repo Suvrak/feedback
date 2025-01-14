@@ -1,51 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2e2e2e; /* Темный фон */
-    color: #ffffff; /* Белый текст */
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    color: #ffffff; /* Белый текст заголовка */
 }
 
 .tree {
-    margin: 20px auto;
-    width: 80%;
+    float: left;
+    width: 30%;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-.folder {
-    cursor: pointer;
-    font-weight: bold;
-    color: #00aaff; /* Цвет папок */
-}
-
-.file {
-    cursor: default;
-    color: #ffffff; /* Цвет файлов */
-}
-
-.folder ul {
-    display: none; /* Скрываем вложенные списки по умолчанию */
-}
-
-.folder.open > ul {
-    display: block; /* Показываем вложенные списки при открытии */
-}
-
-/* Добавим немного стилей для отделения элементов */
-li {
-    margin: 5px 0;
-}
 .details {
-    margin-top: 20px;
+    float: left;
+    width: 65%;
+    margin-left: 5%;
     padding: 10px;
     background-color: #3e3e3e; /* Темный фон для деталей */
     border-radius: 5px;
@@ -53,4 +18,34 @@ li {
 
 #info {
     color: #ffffff; /* Белый текст для информации */
+}
+
+.folder {
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px; /* Отступ для плюса/минуса */
+}
+
+.toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.device {
+    cursor: pointer;
+    padding-left: 20px; /* Отступ для дочерних устройств */
+}
+
+ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding-left: 20px; /* Отступ для вложенных списков */
+}
+
+ul ul {
+    display: none; /* Скрываем вложенные списки по умолчанию */
+}
+
+.open > ul {
+    display: block; /* Показываем вложенные списки, если папка открыта */
 }
